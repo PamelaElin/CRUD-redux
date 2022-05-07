@@ -4,7 +4,7 @@ import TextField from '../../components/TextField/TextField';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { editUser } from './userSlice';
+import { editUser } from '../../redux/userSlice';
 
 
 const EditUser = () => {

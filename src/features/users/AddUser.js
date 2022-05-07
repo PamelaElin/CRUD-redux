@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addUser } from './userSlice';
+import { addUser } from '../../redux/userSlice';
 
 const AddUser = () => {
   const dispatch=useDispatch();
@@ -14,27 +14,35 @@ const AddUser = () => {
         name:'',
         email:'',
     });
+ 
     const handleAddUser=()=>{
         setValues({name:'',email:''});
         dispatch(addUser({
+         
           id:uuidv4(),
           name:values.name,
           email:values.email,
-        }))
-    navigate('/')}
+         
+        }) ); 
+    navigate('/');
+ 
+}
   return (
-    <div className='mt-10 max-w-xl mx-auto'>
+    <div className='mt-10 max-w-xl mx-auto '>
         <TextField 
+        
         value={values.name}
         onChange={(e)=>setValues({...values,name:e.target.value})}
         label={'Name'}
-        inputProps={{type:'text', placeholder:'Jhon Doe'}}/> 
+        inputProps={{type:'text', placeholder:'Name'}}/> 
            <TextField 
             value={values.email}
             onChange={(e)=>setValues({...values,email:e.target.value})}
         label={'Email'}
-        inputProps={{type:'email', placeholder:'jhondoe@email.com'}}/> 
-        <Button onClick={handleAddUser}>Submit</Button>
+        inputProps={{type:'email', placeholder:'email@email.com'}}/> 
+        
+        <Button onClick={handleAddUser }>Submit</Button>
+        
     </div>
    
 
