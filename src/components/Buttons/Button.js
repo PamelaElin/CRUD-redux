@@ -4,7 +4,7 @@ const Button = ({onClick, children,onChange}) => {
   return (
     <div>
         
-        <button className='bg-emerald-400 ring-2  text-white font-medium py-2 px-6 my-10 rounded-lg hover:bg-emerald-700'
+        <button className='bg-indigo-400 ring-2  text-white font-medium py-2 px-6 my-10 rounded-lg hover:bg-fuchsia-500'
         onClick={onClick}
        >
         {children}

@@ -33,12 +33,12 @@ return (
       value={values.name}
       onChange={(e)=>setValues({...values,name:e.target.value})}
       label={'Name'}
-      inputProps={{type:'text', placeholder:'Jhon Doe'}}/> 
+      inputProps={{type:'text', placeholder:'Edit name'}}/> 
          <TextField 
           value={values.email}
           onChange={(e)=>setValues({...values,email:e.target.value})}
       label={'Email'}
-      inputProps={{type:'email', placeholder:'jhondoe@email.com'}}/> 
+      inputProps={{type:'email', placeholder:'Edit email'}}/> 
       <Button onClick={handleEditUser}>Edit</Button>
   </div>
  

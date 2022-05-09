@@ -28,7 +28,7 @@ const AddUser = () => {
  
 }
   return (
-    <div className='mt-10 max-w-xl mx-auto '>
+    <div className='mt-10  mx-auto   '>
         <TextField 
         
         value={values.name}

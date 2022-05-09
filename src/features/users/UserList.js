@@ -14,12 +14,12 @@ export const UserList = () => {
         key={user.id}
         className=" p-5 flex items-center justify-between"
       >
-        <div>
-          <h3 className="font-bold text-lg text-emerald-700">{user.name}</h3>
-          <span className="font-normal text-black">{user.email}</span>
+        <div className="w-96">
+          <h3 className="font-bold text-lg text-purple-900 text-center">{user.name}</h3>
+          <span className="font-normal text-black flex justify-center">{user.email}</span>
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex gap-4 ">
           <Link to={`edit-user/${user.id}`}>
             <button>
               <AiOutlineEdit />
@@ -38,15 +38,17 @@ export const UserList = () => {
         <Button>Add User</Button>
       </Link>
 
-      <div className="grid gap-5 md:grid-cols-2 bg-gradient-to-r from-emerald-300  to-emerald-100 ">
+      
+        <div className="bg-gradient-to-r md:grid md:grid-cols-2 gap-2  from-fuchsia-500 to-rose-100  "> 
         {users.length ? (
           renderCard()
         ) : (
-          <p className="grid justify-end  font-semibold">
+          <p className="  font-semibold text-center col-span-2 text-gray-700 ">
             No user
           </p>
-        )}
-      </div>
+        )}</div>
+       
+      
     </div>
   );
 };
